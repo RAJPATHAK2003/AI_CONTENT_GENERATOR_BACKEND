@@ -53,7 +53,7 @@ cron.schedule('0 0 * * * *',async()=>{
 app.use(express.json())
 app.use(cookieParser());
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'http://all-mii2.vercel.app',
     credentials: true,
 };
 
