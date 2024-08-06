@@ -53,7 +53,7 @@ cron.schedule('0 0 * * * *',async()=>{
 app.use(express.json())
 app.use(cookieParser());
 const corsOptions = {
-    origin: 'http://all-mii2.vercel.app',
+    origin: 'https://ai-content-generator-frontend-taupe.vercel.app',
     credentials: true,
 };
 
