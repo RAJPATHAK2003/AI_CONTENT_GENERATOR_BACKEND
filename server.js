@@ -60,7 +60,7 @@ app.use(cookieParser());
 //     origin: ['https://ai-content-generator-frontend-taupe.vercel.app', 'http://localhost:3000'],
 //     credentials: true,
 // }));
-const allowedOrigins = process.env.NODE_ENV === 'production' 
+const allowedOrigins = process.env.NODE_ENV === 'development' 
     ? ['https://ai-content-generator-frontend-taupe.vercel.app']
     : ['http://localhost:3000', 'https://ai-content-generator-frontend-taupe.vercel.app'];
 
