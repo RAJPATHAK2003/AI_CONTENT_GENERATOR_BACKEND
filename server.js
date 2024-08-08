@@ -61,8 +61,8 @@ app.use(cookieParser());
 //     credentials: true,
 // }));
 const allowedOrigins = process.env.NODE_ENV === 'development' 
-    ? ['https://ai-content-generator-frontend-taupe.vercel.app']
-    : ['http://localhost:3000', 'https://ai-content-generator-frontend-taupe.vercel.app'];
+    ? ['https://ai-content-generator-frontend.onrender.com']
+    : ['http://localhost:3000', 'https://ai-content-generator-frontend.onrender.com'];
 
 app.use(cors({
     origin: allowedOrigins,
