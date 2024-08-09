@@ -102,24 +102,28 @@ const logout=asyncHandler(async(req,res)=>{
 })
 
 //Profile
-const userProfile=asyncHandler(async(req,res)=>{
-    // const id='669153291be02444488a85f9';
+const userProfile = asyncHandler(async (req, res) => {
+    // Assuming req.user.id is properly set by authentication middleware
     const user = await User.findById(req?.user?.id)
-    .select("-password")
-    .populate("payments")
-    .populate("contenthistory");
-    if(user){
-        res.status(200).json({
-            status:'success',
-            user,
-        })
-    }
-    else{
-        res.status(404);
-        throw new Error('Profile Not Exisst');
-    }
+        .select("-password")
+        .populate("payments")
+        .populate("contenthistory");
 
-})
+    if (user) {
+        res.status(200).json({
+            status: 'success',
+            user,
+        });
+    } else {
+        res.status(404).json({
+            status: 'fail',
+            message: 'Profile Does Not Exist',
+        });
+        // No need to throw an error if already sending a response
+        // throw new Error('Profile Does Not Exist');
+    }
+});
+
 
 //Check Auth
 const checkAuth = asyncHandler(async (req, res) => {
