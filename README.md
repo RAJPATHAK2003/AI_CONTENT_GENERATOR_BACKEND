@@ -3,6 +3,12 @@
 ## Overview
 
 This is a MERN stack project designed for AI content generation using the OpenAI API. The application features user authentication and authorization, Stripe payment integration, and a user dashboard. This project demonstrates the use of modern web technologies to build a scalable and interactive content generation platform.
+## Project Demo
+
+Click the image below to watch the video:
+
+[![Watch the video](https://github.com/user-attachments/assets/98753998-ce20-484c-9eb7-c82673358961)](https://youtu.be/hcJgZDJMNJ8)
+
 
 ## Features
 
